@@ -4,11 +4,9 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import io.terminus.common.utils.JsonMapper
 import org.apache.rocketmq.client.consumer.DefaultMQPushConsumer
 import org.apache.rocketmq.client.consumer.MessageSelector
-import org.apache.rocketmq.client.consumer.listener.ConsumeConcurrentlyContext
 import org.apache.rocketmq.client.consumer.listener.ConsumeConcurrentlyStatus
 import org.apache.rocketmq.client.consumer.listener.MessageListenerConcurrently
 import org.apache.rocketmq.common.consumer.ConsumeFromWhere
-import org.apache.rocketmq.common.message.MessageExt
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration

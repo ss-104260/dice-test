@@ -144,7 +144,7 @@
             <dependency>
                 <groupId>io.terminus.boot.rpc</groupId>
                 <artifactId>rpc-dubbo</artifactId>
-                <version>1.0.7-release</version>
+                <version>1.0.7.RELEASE</version>
                 <exclusions>
                     <exclusion>
                         <groupId>com.101tec</groupId>

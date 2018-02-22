@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
+import java.util.*
 
 
 @RestController
@@ -24,7 +25,7 @@ class RocketMQController {
     fun produce() {
         val user = User().apply {
             name = "dice-test"
-            age = 18
+            age = Random().nextInt(100)
         }
         val message = Message("dice-test", "dice-test", objectMapper.writeValueAsBytes(user))
         val result = producer.send(message)
