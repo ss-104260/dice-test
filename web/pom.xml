@@ -33,10 +33,10 @@
         </dependency>
 
         <!-- session -->
-        <dependency>
-            <groupId>io.terminus.boot</groupId>
-            <artifactId>spring-boot-starter-session</artifactId>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>io.terminus.boot</groupId>-->
+            <!--<artifactId>spring-boot-starter-session</artifactId>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>io.terminus.boot.rpc</groupId>
             <artifactId>rpc-dubbo</artifactId>
@@ -57,10 +57,10 @@
             <artifactId>slf4j-api</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>net.sf.dozer</groupId>
-            <artifactId>dozer</artifactId>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>net.sf.dozer</groupId>-->
+            <!--<artifactId>dozer</artifactId>-->
+        <!--</dependency>-->
 
         <dependency>
             <groupId>io.terminus</groupId>
@@ -69,14 +69,14 @@
         </dependency>
 
         <!-- SWAGGER -->
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>io.springfox</groupId>-->
+            <!--<artifactId>springfox-swagger2</artifactId>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>io.springfox</groupId>-->
+            <!--<artifactId>springfox-swagger-ui</artifactId>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>org.apache.rocketmq</groupId>
             <artifactId>rocketmq-client</artifactId>
