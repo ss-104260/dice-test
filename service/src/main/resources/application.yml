@@ -1,0 +1,20 @@
+logging:
+  file: ${user.home}/logs/dice-test/price.log
+  level.*: INFO
+  level.io.terminus: DEBUG
+
+spring:
+  application:
+    name: dice-test-service
+
+rpc.mode: true
+rpc.dubbo:
+  module: price-center
+  reg-protocol: zookeeper
+  registry-address: ${ZOOKEEPER_HOST:127.0.0.1}:${ZOOKEEPER_PORT:2181}
+  port: ${DUBBO_PORT:20880}
+
+terminus:
+  rocketmq:
+    nameServerAddress: ${ROCKETMQ_NAMESRV_HOST:localhost}:${ROCKETMQ_NAMESRV_PORT:9876}
+    consumerGroup: dice-test
