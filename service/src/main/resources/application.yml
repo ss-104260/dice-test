@@ -17,5 +17,6 @@ rpc.dubbo:
 
 terminus:
   rocketmq:
-    nameServerAddress: ${ROCKETMQ_NAMESRV_HOST:localhost}:${ROCKETMQ_NAMESRV_PORT:9876}
+    #nameServerAddress: ${ROCKETMQ_NAMESRV_HOST:localhost}:${ROCKETMQ_NAMESRV_PORT:9876}
+    nameServerAddress: 30.40.87.32:9876;30.40.87.32:9877
     consumerGroup: dice-test
