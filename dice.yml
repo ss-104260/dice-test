@@ -5,20 +5,20 @@ keywords:
   - dice
   - test
 
-services:
-  service:
-    module_path: service
-    context: ./
-    buildpack:
-      bp_repo: http://git.terminus.io/buildpacks/dice-bpack-termjava.git
-      bp_ver: master
-#      bp_args:
-#        - USE_AGENT=true
-    ports:
-      - 20880
-    resources:
-      cpu: 0.1
-      mem: 512
+#services:
+#  service:
+#    module_path: service
+#    context: ./
+#    buildpack:
+#      bp_repo: http://git.terminus.io/buildpacks/dice-bpack-termjava.git
+#      bp_ver: master
+##      bp_args:
+##        - USE_AGENT=true
+#    ports:
+#      - 20880
+#    resources:
+#      cpu: 0.1
+#      mem: 512
 endpoints:
   web:
     module_path: web
