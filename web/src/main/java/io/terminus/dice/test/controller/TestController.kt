@@ -19,6 +19,6 @@ class TestController {
     @GetMapping("/api/v2/stu")
     fun testStu():Student{
 
-        return Student().apply { name = "simple" }
+        return Student().apply { name = "simple-test" }
     }
 }
