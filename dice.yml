@@ -22,7 +22,6 @@ keywords:
 endpoints:
   web:
     module_path: web
-    cmd: echo hello && python3 -m http.server 8080
     context: ./
     buildpack:
       bp_repo: http://git.terminus.io/buildpacks/dice-bpack-termjava.git
