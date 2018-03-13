@@ -28,8 +28,6 @@ endpoints:
       bp_ver: master
 #      bp_args:
 #        - USE_AGENT=true
-    depends:
-    - test
     ports:
       - 8080
     resources:
