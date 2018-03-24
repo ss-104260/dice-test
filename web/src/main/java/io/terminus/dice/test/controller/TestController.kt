@@ -21,4 +21,10 @@ class TestController {
 
         return Student().apply { name = "simple-test" }
     }
+
+    @RequestMapping("/map/json")
+    fun testMap():Map<String, Map<String, String>>{
+
+        return mapOf("test" to mapOf("name" to "app"))
+    }
 }

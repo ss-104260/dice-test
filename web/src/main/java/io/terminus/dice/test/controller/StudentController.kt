@@ -14,4 +14,5 @@ class StudentController {
             name = "me"
         }
     }
+
 }

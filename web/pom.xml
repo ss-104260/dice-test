@@ -98,7 +98,7 @@
                 <version>1.4.0.RELEASE</version>
                 <configuration>
                     <executable>true</executable>
-                    <classifier>exec</classifier>
+                    <!--<classifier>exec</classifier>-->
                 </configuration>
                 <executions>
                     <execution>
