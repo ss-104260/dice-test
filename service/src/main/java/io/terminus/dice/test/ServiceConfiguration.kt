@@ -32,6 +32,7 @@ class ServiceConfiguration {
             }
             ConsumeConcurrentlyStatus.CONSUME_SUCCESS
         })
+        println(">>>test<<<")
         consumer.start()
         return consumer
     }
