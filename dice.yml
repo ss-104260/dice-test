@@ -33,7 +33,28 @@ endpoints:
     resources:
       cpu: 0.1
       mem: 512
-
+job:
+  # job 文件所在目，如果为空，默认 job
+  context: job
+  cpu: 0.1
+  mem: 128
+  # 任务列表
+  tasks:
+    # 任务名称，必须唯一
+    test1:
+      # 如果为空，使用 job 中的配置
+      cpu: 0.1
+      # 如果为空，使用 job 中的配置
+      mem: 128
+      # 执行任务时的命令，将在 task_path 目录下执行；若为空，若为空，将执行 entrypoint 指定的 shell 脚本
+      cmd: ./test.sh
+      # 任务目录，路径相对于 job.context 的路径，若为空，则为任务名称: name
+      task_path: test1
+    test2:
+      cpu: 0.1
+      mem: 128
+      cmd: ./test.sh
+      task_path: test2
 #addons:
 #  mysql: # 与 application.toml 中的 header 匹配
 #    plan: mysql:small
