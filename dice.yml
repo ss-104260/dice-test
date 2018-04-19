@@ -42,7 +42,7 @@ job:
   tasks:
     # 任务名称，必须唯一
     test1:
-      description: 测试1
+      description: 测试描述1
       # 如果为空，使用 job 中的配置
       cpu: 0.1
       # 如果为空，使用 job 中的配置
@@ -52,7 +52,7 @@ job:
       # 任务目录，路径相对于 job.context 的路径，若为空，则为任务名称: name
       task_path: test1
     test2:
-      description: 测试2
+      description: 测试描述2
       cpu: 0.1
       mem: 128
       cmd: ./test.sh
