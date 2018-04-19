@@ -25,7 +25,7 @@ endpoints:
     context: ./
     buildpack:
       bp_repo: http://git.terminus.io/buildpacks/dice-bpack-termjava.git
-      bp_ver: master
+      bp_ver: feature/two-layer
 #      bp_args:
 #        - USE_AGENT=true
     ports:
