@@ -51,12 +51,12 @@ job:
       cmd: ./test.sh
       # 任务目录，路径相对于 job.context 的路径，若为空，则为任务名称: name
       task_path: test1
-    test3:
-      description: 测试描述3
+    test2:
+      description: 测试描述2
       cpu: 0.1
       mem: 128
       cmd: ./test.sh
-      task_path: test3
+      task_path: test2
 #addons:
 #  mysql: # 与 application.toml 中的 header 匹配
 #    plan: mysql:small
