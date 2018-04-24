@@ -7,4 +7,6 @@ do
     sleep 1
 done
 
+echo "loop stop"
+
 echo "this is a test"
