@@ -50,13 +50,13 @@ job:
       # 执行任务时的命令，将在 task_path 目录下执行；若为空，若为空，将执行 entrypoint 指定的 shell 脚本
       cmd: ./test.sh
       # 任务目录，路径相对于 job.context 的路径，若为空，则为任务名称: name
-      path: test1
+      task_path: test1
     test2:
       description: 测试描述2
       cpu: 0.1
       mem: 128
       cmd: ./test.sh
-      path: test2
+      task_path: test2
 #addons:
 #  mysql: # 与 application.toml 中的 header 匹配
 #    plan: mysql:small
