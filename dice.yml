@@ -1,46 +1,33 @@
-name: dice-test
-description: terminus wonly bahariya
-# 项目关键词
-keywords:
-  - dice
-  - test
+version: 2.0
 
-#services:
-#  service:
-#    module_path: service
-#    context: ./
-#    buildpack:
-#      bp_repo: http://git.terminus.io/buildpacks/dice-bpack-termjava.git
-#      bp_ver: master
-##      bp_args:
-##        - USE_AGENT=true
-#    ports:
-#      - 20880
-#    resources:
-#      cpu: 0.1
-#      mem: 512
-endpoints:
+envs:
+  TERMINUS_APP_NAME: TEST-global
+  TEST_PARAM: param_value
+
+services:
   web:
-    module_path: web
-    context: ./
-    buildpack:
-      bp_repo: http://git.terminus.io/buildpacks/dice-bpack-termjava.git
-      bp_ver: master
-      bp_args:
-        - USE_AGENT=true
     ports:
+      - 20880
       - 8080
+    health_check:
+      exec:
+        cmd: echo 1
+    deployments:
+      replicas: 1
     resources:
       cpu: 0.1
       mem: 512
+      disk: 0
+    expose:
+      - 20880
+
 
 addons:
   mysql: # 与 application.toml 中的 header 匹配
-    plan: mysql:small
+    plan: mysql:basic
     options:
-      version: 5.7
+      version: 5.7.23
       create_db: requisition-pool
-    image: dnhsoft/mysql-utf8
 
   monitor:
-    plan: monitor:dev
+    plan: monitor:professional
