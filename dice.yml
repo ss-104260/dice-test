@@ -7,8 +7,8 @@ envs:
 services:
   web:
     ports:
-      - 20880
       - 8080
+      - 20880
     health_check:
       exec:
         cmd: echo 1
