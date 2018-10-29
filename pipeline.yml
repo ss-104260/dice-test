@@ -1,0 +1,44 @@
+resources:
+- name: repo
+  source:
+    branch: ((gittar.branch))
+    password: ((gittar.password))
+    uri: ((gittar.repo))
+    username: ((gittar.username))
+  type: git
+- name: deploy
+  source:
+    app_id: ((dice.id))
+    branch: ((gittar.branch))
+    operator_id: ((dice.operator.id))
+    uri: ((dice.url))
+    workspace: ((dice.env))
+  type: dice
+- name: bp-web
+  source:
+    bp_args:
+      USE_AGENT: "true"
+    bp_repo: http://git.terminus.io/buildpacks/dice-bpack-termjava.git
+    bp_ver: master
+    context: repo
+    modules:
+    - name: web
+  type: buildpack
+stages:
+- name: repo
+  tasks:
+  - get: repo
+    params:
+      depth: 1
+- name: buildpack
+  tasks:
+  - aggregate:
+    - put: bp-web
+- name: deploy
+  tasks:
+  - params:
+      dice_yml: repo/dice.yml
+      replacement_images:
+      - bp-web/pack-result
+    put: deploy
+version: "1.0"

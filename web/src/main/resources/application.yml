@@ -34,12 +34,12 @@ spring:
 #  redis-max-idle: 0
 #  redis-prefix: dice-test
 
-rpc.mode: true
-
-rpc.dubbo:
-  module: dice-test-web
-  registryAddress: ${ZOOKEEPER_HOST:127.0.0.1}:${ZOOKEEPER_PORT:2181}
-  port: ${DUBBO_PORT:20880}
+#rpc.mode: true
+#
+#rpc.dubbo:
+#  module: dice-test-web
+#  registryAddress: ${ZOOKEEPER_HOST:127.0.0.1}:${ZOOKEEPER_PORT:2181}
+#  port: ${DUBBO_PORT:20880}
 
 #search.enabled: true
 
@@ -47,8 +47,3 @@ rpc.dubbo:
 #  zk.host: ${ZOOKEEPER_HOST:127.0.0.1}
 #  zk.port: ${ZOOKEEPER_PORT:2181}
 
-terminus:
-  rocketmq:
-    #nameServerAddress: ${ROCKETMQ_NAMESRV_HOST:localhost}:${ROCKETMQ_NAMESRV_PORT:9876}
-    nameServerAddress: 30.40.87.32:9876;30.40.87.32:9877
-    producerGroup: dice-test

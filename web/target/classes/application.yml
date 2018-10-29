@@ -10,44 +10,40 @@ server:
 spring:
   application:
     name: dice-test-web
-  datasource:
-    initialize: false
-  redis:
-    port: ${REDIS_PORT}
-    host: ${REDIS_HOST}
-    password: ${REDIS_PASSWORD}
+#  datasource:
+#    initialize: false
+#  redis:
+#    port: ${REDIS_PORT}
+#    host: ${REDIS_HOST}
+#    password: ${REDIS_PASSWORD}
 
-session: # session
-  cookie-domain: dice-test.app.terminus.io #cookie域与访问域一致
-  cookie-context-path: /
-  cookie-name: ulid
-  cookie-max-age: 1800
-  source: redis
-  serialize-type: json
-  redis-host: ${REDIS_HOST:127.0.0.1}   #根据自己本地环境配置
-  redis-port: ${REDIS_PORT:6379}        #根据自己本地环境配置
-  redis-auth: ${REDIS_PASSWORD:}
-  redis-index: 0
-  redis-cluster: false
-  redis-test-on-borrow: true
-  redis-max-total: 10
-  redis-max-idle: 0
-  redis-prefix: dice-test
+#session: # session
+#  cookie-domain: dice-test.app.terminus.io #cookie域与访问域一致
+#  cookie-context-path: /
+#  cookie-name: ulid
+#  cookie-max-age: 1800
+#  source: redis
+#  serialize-type: json
+#  redis-host: ${REDIS_HOST:127.0.0.1}   #根据自己本地环境配置
+#  redis-port: ${REDIS_PORT:6379}        #根据自己本地环境配置
+#  redis-auth: ${REDIS_PASSWORD:}
+#  redis-index: 0
+#  redis-cluster: false
+#  redis-test-on-borrow: true
+#  redis-max-total: 10
+#  redis-max-idle: 0
+#  redis-prefix: dice-test
 
-rpc.mode: true
+#rpc.mode: true
+#
+#rpc.dubbo:
+#  module: dice-test-web
+#  registryAddress: ${ZOOKEEPER_HOST:127.0.0.1}:${ZOOKEEPER_PORT:2181}
+#  port: ${DUBBO_PORT:20880}
 
-rpc.dubbo:
-  module: dice-test-web
-  registryAddress: ${ZOOKEEPER_HOST:127.0.0.1}:${ZOOKEEPER_PORT:2181}
-  port: ${DUBBO_PORT:20880}
-
-search.enabled: true
+#search.enabled: true
 
 #curator:
 #  zk.host: ${ZOOKEEPER_HOST:127.0.0.1}
 #  zk.port: ${ZOOKEEPER_PORT:2181}
 
-terminus:
-  rocketmq:
-    nameServerAddress: ${ROCKETMQ_NAMESRV_HOST:localhost}:${ROCKETMQ_NAMESRV_PORT:9876}
-    producerGroup: dice-test
