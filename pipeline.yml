@@ -1,3 +1,4 @@
+version: "1.0"
 resources:
 - name: repo
   source:
@@ -41,4 +42,3 @@ stages:
       replacement_images:
       - bp-web/pack-result
     put: deploy
-version: "1.0"
