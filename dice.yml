@@ -23,7 +23,3 @@ addons:
     plan: "redis:basic"
     options:
       version: "3.2.12"
-  zk:
-    plan: "terminus-zkproxy:basic"
-    options:
-      version: "0.0.2"
