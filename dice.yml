@@ -1,9 +1,7 @@
-version: 2.0
-
+version: 2
 envs:
-  TERMINUS_APP_NAME: TEST-global
-  TEST_PARAM: param_value
-
+  TERMINUS_APP_NAME: "TEST-global"
+  TEST_PARAM: "param_value"
 services:
   web:
     ports:
@@ -11,7 +9,7 @@ services:
       - 20880
     health_check:
       exec:
-        cmd: echo 1
+        cmd: "echo 1"
     deployments:
       replicas: 1
     resources:
@@ -20,14 +18,8 @@ services:
       disk: 0
     expose:
       - 20880
-
-
 addons:
-  mysql: # 与 application.toml 中的 header 匹配
-    plan: mysql:basic
+  redis:
+    plan: "redis:basic"
     options:
-      version: 5.7.23
-      create_db: requisition-pool
-
-  monitor:
-    plan: monitor:professional
+      version: "3.2.12"
